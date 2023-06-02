@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks</title>
+</head>
+<body>
+    <div class= "getAge">
+         <svg>
+
+     <symbol id="text">
+
+     <text text-anchor= "middle" x= "50%" y = "50%" >
+      Adeola
+     </text>
+     </symbol>
+    <use xlink:href= "#text"
+     >
+        
+    </use>
+     </svg>
+
+        <h1>How old are you</h1>
+        <input type="text" required placeholder="How old are you now" class="age" />
+        <button id="btn">Submit</button> </div>
+        
+        
+    </div>
+    
+     <div class="carousel container">
+     <!--carousel 2-->
+     <div class="slide">
+        <img src="wewhite.png" alt="moodboard white">
+     </div>
+     
+      
+     <!--carousel 3-->
+     <div class="slide">
+        <img src="gamepadblack.png" alt="gaming">
+     </div>
+
+    
+     <!--carousel 4-->
+     <div class="slide">
+        <img src="wegreen.png" alt="moodboard">
+     </div>
+
+
+     <div class="slide">
+      <img src="697381.jpg" alt="">
+     </div>
+
+    
+     <!--carousel 5-->
+     <div class="slide">
+        <img src="gamepadw.png" alt="gaming">
+
+     </div>
+        <!--Control buttons-->
+
+        <button class ="btn btn-next" >></button>
+
+        <button class="btn btn-prev">< 
+        </div>
+        
+        <div class="canvas">
+              <canvas>
+    </canvas>
+   
+    
+        </div>
+        <style>
+        *{
+    box-sizing: border-box;
+    transition: opacity 2s ease-in;
+}
+
+h1 {
+
+    font-style: calibri;
+
+    color:blueviolet;
+}
+p{
+    
+    color: red;
+    background-color: yellow;
+    font-size: 30px;
+}
+   
+
+   svg{
+
+       width: 90%;
+       margin: 0 auto;
+       height: 350px;
+       position: absolute;
+       top: -50%;
+       left: 0%;
+     z-index: -4;
+       
+   }
+   
+   svg text {
+       font-size: 70px;
+       fill: rgba(0,0,0,0.3);
+       stroke-width: 2px;
+       stroke-linecap: round;
+       stroke-linejoin: round;
+       stroke-dasharray: 80;
+       stroke: #fff;
+       animation: animate 1s  linear infinite, moves 12s linear infinite 5s;
+       transition: transform 2s ease-in-out;
+       stroke-opacity: 0.5;
+   }
+    
+    
+    
+    
+    @keyframes animate {
+        100%{
+            stroke-dashoffset: 160;
+        }
+    }
+   
+   SVG{
+
+       width: 90%;
+       margin: 0 auto;
+       height: 350px;
+       position: absolute;
+       top: -10%;
+       left: 0%;
+       
+   }
+   
+   svg text {
+       font-size: 70px;
+       fill: rgba(0,0,0,0.3);
+       stroke-width: 1px;
+       stroke-linecap: round;
+       stroke-linejoin: round;
+       stroke-dasharray: 80;
+       stroke: #fff;
+       animation: animate 1s  linear infinite;
+       transition: transform 2s ease-in-out;
+       stroke-opacity: 0.5;
+   }
+    
+    
+    
+    
+    @keyframes animate {
+        100%{
+            stroke-dashoffset: 160;
+        }
+    }
+    
+.getAge {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   width: 100vw;
+   z-index: 1000;
+   opacity: 1;
+   overflow: hidden;
+}
+.active {
+  transform: translateX(100%);  
+}
+.age{
+    background-color: transparent;
+    padding: 0.5rem 5rem;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 10vh;
+    font-size: 1rem;
+    border: 0;
+    z-index: 1200;
+    border-bottom: solid 1px yellow;
+}
+.age:focus {
+    background-color: gray;
+}
+
+#btn{
+    color: yellow;
+    background-color: purple;
+    padding: 0.5rem 3rem;
+    border: 0;
+}
+body{
+   background-image: url("2349018590591_status_11784fe8e489485e8e33dd271496c808.jpg");
+  /* background-image: url("logo.svg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    
+    z-index: -1;
+    
+}
+
+
+
+.carousel{
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    position: absolute;
+    top: 20%;  
+ overflow: hidden;
+   border-radius: 15px;
+   z-index: 500;
+   opacity: 0;
+   transition: opacity 2s ease-out 1ms;
+
+}
+
+.slide{
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+}
+.slide img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.btn {
+    position:  absolute;
+   
+    width: 42px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.btn {
+    transform: scale(1.1);
+opacity: 1;
+
+}
+.btn:hover {
+    transform: scale(1.1);
+opacity: 1;
+box-shadow: 10px 10px 120px red;
+background-color:red;
+z-index: 10000;
+}
+
+.btn-prev{
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next{
+    top: 45%;
+    right: 2%;
+}
+  .canvas {
+      overflow: hidden;
+    position: relative;
+    top: 0%;
+    left: -2.2%;
+    width: 100vw;
+    height: 100vh;
+     min-width: 100%;
+     border: 0;
+     z-index: 100;
+     opacity: 0;
+    transition: opacity 2s ease-out ;
+  } 
+     canvas {
+         width: 100%;
+         height: 100vh;
+     }
+     .ttt{
+        position: absolute; 
+        top: 20%;
+        left: 50%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 1rem;
+        background-color: transparent;
+        color: yellow;
+        border solid gray 1px
+     }
+        </style>
+
+<script>
+
+
+          const iNput = document.querySelector(".age"); 
+          const Byn = document.querySelector("#btn");
+          const getdAge = document.querySelector(".getAge");
+          iNput.value = "";
+        
+          
+          function Sub () {
+              if(iNput.value === ""){
+                  
+                  alert("Enter your real Age");
+              }
+              else{
+                  getdAge.style.opacity ="0"
+              getdAge.classList.add('active')
+              }
+              slidesAlone()
+              
+          }
+          
+              
+          Byn.addEventListener("click", Sub);
+          
+
+
+
+    const slideshow = document.querySelectorAll(".slide");
+
+
+
+slideshow.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+
+let viewingSlide = -2;
+let maxslide = slideshow.length - 1;
+const nextslide = document.querySelector(".btn-next");
+
+nextslide.addEventListener("click", function () {
+  if (viewingSlide === maxslide) {
+    slideshow.style.display = "none" ;
+  } else {
+    viewingSlide++;
+  }
+
+  slides()
+});
+
+const prevslide = document.querySelector(".btn-prev");
+
+prevslide.addEventListener("click", function () {
+  if (viewingSlide === 0) {
+    viewingSlide = maxslide;
+  } else {
+    viewingSlide--;
+  
+  }
+  slides()
+  
+});
+function slides() {
+    
+    slidesContainer.style.opacity = "1";
+  slideshow.forEach((slide, indx) => {
+      
+ document.body.style.backgroundImage  = "none"
+
+    slide.style.transform = `translateX(${100 * (indx - viewingSlide)}%)`;
+  });
+}
+
+
+prevslide.addEventListener("hover", function () {
+  if (viewingSlide === 0) {
+    viewingSlide = maxslide;
+  } else {
+    viewingSlide--;
+  }
+
+  slideshow.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - viewingSlide)}%)`;
+  });
+});
+
+var c;
+function fireWorks () {
+
+        var t = 0;
+        CD = document.querySelector('.canvas');
+        
+         c = document.querySelector("canvas");  
+         CD.style.opacity = "1"
+         
+        var color = c.getContext('2d');
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+        color.fillStyle = 'hsla(0,0%,0%,1)';
+
+        window.addEventListener('resize', function() {
+          c.width = window.innerWidth;
+          c.height = window.innerHeight;
+        }, false);
+
+        function draw() {
+          color.globalCompositeOperation = 'source-over';
+          color.fillStyle = 'hsla(0,0%,0%,.1)';
+          color.fillRect(0, 0, c.width, c.height);
+          var foo, i, j, r;
+          foo = Math.sin(t) * 2 * Math.PI;
+          for (i=0; i<400; ++i) {
+            r = 400 * Math.sin(i * foo);
+            color.globalCompositeOperation = '';
+            color.fillStyle = 'hsla(' + i + 12 + ',100%, 60%,1)';
+            color.beginPath();
+            color.arc(Math.sin(i) * r + (c.width / 2), 
+                  Math.cos(i) * r + (c.height / 2), 
+                  1.5, 0, Math.PI * 2);
+            color.fill();
+
+          }
+          t += 0.000005;
+          return t %= 2 * Math.PI;
+
+        };
+
+        function run() {
+          window.requestAnimationFrame(run);
+          draw();
+        }
+        run();
+ 
+}
+
+
+
+
+
+function  slidesAlone() {
+
+let interval = setInterval (runn, 3000)
+
+
+}
+
+const slidesContainer = document.querySelector('.carousel')
+function runn () {
+    
+    viewingSlide++;
+    slides()
+    if (viewingSlide > maxslide ) {
+        
+        slidesContainer.style.display = "none"
+        slidesContainer.classList.add('active')
+        fireWorks()
+        
+    }
+}
+
+</script>
+    
+</body>
+</html>

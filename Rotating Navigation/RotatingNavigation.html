@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Movie</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button class="openBtn" type="submit"><i class="fas fa-bars"></i></button>
+
+                <button class="closeBtn" type="submit"><i class="fas fa-times"></i></button>
+
+
+            </div>
+        </div>
+        <div class="content">
+
+
+            <h2 class="header">Amazing Article</h2>
+
+            <p>
+                Partition co-efficient is one of the Physicochemical parameter which influence the drug transport & drug distribution., the way in which the drug reaches the site of action from the site of application.
+                Partition co-efficient is defined as equilibrium constant of drug concentration for unionized molecule in two phases.
+                P[Unionizedmolecule] = [drug]lipid [drug]water
+                •For ionized (acids, bases and salts) P[Ionizedmolecule] = [drug]lipid [1-a ][drug]water
+                a = degree of ionization in aqueous solution.
+                Partition coefficient affects the drug transfer characteristics.
+                The contribution of each functional group & structural arrangement help to determine the lipophilic or hydrophilic character of drug molecules.
+                It is widely used in QSAR.
+                •Factors affecting Partition Co-efficient
+                 pH  Co solvents  Surfactant  Complexation
+                Partition Co-efficient are difficult to measure in living system.
+                They are usually determined in vitro 1-octanol as a lipid phase and phosphate buffer of pH 7.4 as the aqueous phase.
+                1-octanol as a lipid phase because, It has polar and nonpolar region
+
+                Po/w is easy to measure Po/w often correlates with many biological properties
+                It can be predicted using computational mode.
+                The Partition co-efficient, P is dimensionless and its logarithm, log P is widely used as the n of lipophilicity.
+                • The log P is measured by the following methods.
+                1) Shake flask method
+                2) Chromatographic method (HPLC)
+                • Phenobarbitone has a high lipid/water partition coefficient of 5.9
+                . Thiopentone sodium has a chloroform/water partition coefficient of about 100, so it is highly soluble in lipid.
+                • Hence, thiopentone sodium is used as ultra-short acting barbiturates.
+                .  lopP affects the following.:
+                (1)Binding to enzymes /receptor (2) Aqueous solubility(3) Binding to P450 metabolising enzymes (4)Absorbance through membrane and(5) Binging to blood/tissue proteins
+                •Importance of partition coefficient:
+                It is generally used in combination with the Pka to predict the distribution of drug in biological system.  Factors such as absorption, excretion & penetration of the CNS may be related to the log P value of drug. Drugs are usually  designed to have lowest possible Log P...to reduce toxicity, nonspecific binding & bioavailability.
+
+            </p>
+
+            <h4 class="picture">My Dog</h4>
+            <img class="image" src="parrot-4651351_1920.jpg" alt="Image" />
+            <div class="lower-text">
+                ●Surface Activity :
+                 Surfactant is defined as a material that can reduce the surface tension of water at very low
+                concentration.
+                Surface active agents affect the drug absorption which depends on:
+                1.The chemical nature of surfactant
+                2.Its concentration 3.Its affect on biological membrane and the micelle formation.
+                 In lower conc. of surfactant enhanced the rate of absorption because amphiphilies reduces the surface tension and better absorption. In higher conc. of surfactant reduced the rate of absorption.
+                ●Applications:
+                1.The antihelmentic activity of hexylresorcinol
+                2.Bactericidal activity of cationic quaternary ammonium compounds.
+                3.Bactericidal activity of aliphatic alcohols.
+                4.Disinfectant action of phenol and cresol.
+                5.Bile salt solutions of approximately physiological concentration greatly enhance the dissolution rate of poorly water soluble drugs like grasiofulvin, hexestrol by micellar solubilization effect.
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i>Home</li>
+
+            <li><i class="fas fa-fa-user-alt"></i>About</li>
+
+            <li><i class="fas fa-envelope"></i>Contact</li>
+
+        </ul>
+    </nav>
+
+
+</body>
+
+
+<style>
+
+
+    * {
+        box-sizing: border-box;
+
+    }
+
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        background-color: gray;
+        color: darkgreen;
+
+        height: 100vh;
+    }
+    .container {
+        background-color: white;
+        transform-origin: top left;
+        transition: transform 2s linear;
+        min-height: 100vh;
+        padding: 50px;
+        width: 100vw;
+    }
+    .container.show-nav {
+        transform: rotate(-20deg);
+        transition: transform 2s ease-in;
+    }
+    .circle-container {
+        position: fixed;
+        top: -100px;
+        left: -100px;
+    }
+    .circle {
+        background-color: #ff7979;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transition: transform 0.5s linear;
+    }
+
+    .circle button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100px;
+
+        background: transparent;
+        border: 0;
+        color: white;
+        font-size: 26px;
+    }
+
+    .circle button:focus {
+        outline: none;
+    }
+
+    .circle button.openBtn {
+        left: 60%;
+    }
+
+    .container.show-nav .circle {
+        transform: rotate(-70deg);
+    }
+    .circle button.closeBtn {
+        top: 60%;
+        transform: rotate(90deg);
+        transform-origin: top left;
+    }
+    /* for the circle a minus -70-90 to give -20 deg for the clpse btm*/
+    .content .image {
+        max-width: 100%;
+    }
+
+    .content {
+        max-width: 1000px;
+        margin: 50px auto;
+    }
+
+    .content h1 {
+        margin: 0;
+    }
+    nav {
+        z-index: 10;
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+    }
+
+
+    nav ul li {
+
+        list-style-type: none;
+        text-transform: uppercase;
+        /*     transform: translateX(-100px); */
+        margin: 40px 0;
+        color: white;
+        transition: tranform 4s ease-in;
+        transform: translateX(-100%);
+    }
+
+    .container.show-nav {
+        transform: rotate(-20deg);
+        transform-origin: top left;
+    }
+    .content p {
+        line-height: 1.5;
+        color: purple;
+    }
+    nav ul:first-child {
+        transition: transform 2s ease-in;
+    }
+    nav ul li i {
+        margin-right: 10px;
+        font-size: 20px;
+
+    }
+
+    nav ul li + li {
+        margin-left: 15px;
+        transition: transform 2s ease-in;
+        transform: translateX(-150%);
+    }
+
+    nav ul li + li + li {
+        margin-left: 30px;
+        transition: transform 2s ease-in;
+        transform: translateX(-200%);
+    }
+
+    .container.show-nav + nav li {
+        transform: translateX(0);
+    }
+
+</style>
+
+<script>
+
+    const openBtn = document.querySelector('.openBtn');
+    const closeBtn = document.querySelector('.closeBtn');
+    const Container = document.querySelector('.container');
+    openBtn.addEventListener("click", function() {
+        Container.classList.add('show-nav')
+    });
+
+    closeBtn.addEventListener("click", function() {
+
+        Container.classList.remove('show-nav')
+
+    })
+
+</script>
+</html>

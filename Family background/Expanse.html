@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slideshow.css">
+    
+<body>
+    
+<main>
+    <div class="panel"
+        
+        style  = "background-image:url('2349018590591_status_6f9840b135b142d581b7da9b894a93a8.jpg') " >
+        
+        <h3>The crown</h3>
+    </div>
+    
+    
+        <div class="panel"
+
+        
+
+        style = "background-image:url('2347061975017_status_5190a763bb344ebba98d447747a044b7.jpg')">
+        
+        <h3>Sister</h3>
+    </div>
+
+    
+
+        <div class="panel" 
+        style ="background-image:url('2347080433871_status_f52259f6563244b0b7db98a45d6bee1e.jpg')">
+        
+        <h3>The Shot</h3>
+    </div>
+
+        <div class="panel active"
+
+
+
+
+        
+
+        style="background-image:url('2349018590591_status_e50e352722ee405cba0cba0bb8895919.jpg')">
+        
+        <h3>Bay Watch</h3>
+    </div>
+
+
+        <div class= "panel"
+
+
+
+
+
+
+        
+
+    style = "background-image:url('2347080433871_status_a29dffc1f43547969286235407ec44a9.jpg')">
+        
+        <h3>glasses</h3>
+    </div >
+
+<div class="panel"
+        style = "background-image:url(' 2348072937625_status_9ecaeeb8d0964ae9acd1945ff4f75258.jpg' )">
+
+        
+
+        <h3>Cube</h3>
+    </div>
+
+
+
+
+
+</main>
+
+
+</body>
+
+
+<style>
+    
+    *{
+        
+        margin: 0;
+        
+        padding: 0;
+        
+        box-sizing: border-box;
+        
+        max-width: 100%;
+    }
+    
+    
+    
+    body{
+        height: 100vh;
+        
+        width: 100%;
+        
+        display: flex;
+        
+        flex-direction: row;
+        
+        overflow: hidden;
+        margin: 0;
+        
+        align-items: center;
+        justify-content: center;
+        background-color: orange;
+    }
+    
+    
+    
+    main{
+        width: 90vw;
+        display: flex;
+        height: 80vh;
+        background-color: yellow;
+    }
+    
+    .panel{
+        
+        background-size: cover;
+        background-position: center;
+        
+        height: 80vh;
+        border-radius: 50px;
+        background-repeat: no-repeat;
+        
+        color: white;
+        cursor: pointer;
+          flex: 0.5;
+          margin: 10px;
+          
+          position: relative;
+          transition: flex 1.3s ease-in ;
+    }
+    
+    
+    .panel.active{
+        flex: 5;
+        width: 100vw;
+    }
+    
+    .panel h3{
+        font-size: 24px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px ;
+        margin: 0;
+        opacity: 0;
+    }
+    
+    .panel.active h3{
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s ;
+    }
+    
+    
+    @media screen and (max-width: 480px){
+        main{
+            width: 100vw;
+        }
+        
+        .panel:nth-of-type(4), .panel:nth-of-type(5) {
+            display: none;
+        }
+    }
+    
+    
+
+    
+    
+    
+</style>
+
+
+<script>
+    
+   const panels = document.querySelectorAll(".panel");
+   
+   panels.forEach( function(panel) {
+       panel.addEventListener('click', () => {
+           
+           removeActiveClasses()
+           panel.classList.add('active')
+       })
+       
+   })
+   
+   function removeActiveClasses() {
+      
+      
+      
+      panels.forEach(panel => {
+          panel.classList.remove('active')
+      });
+   }
+   
+    
+</script>
+
+</html>

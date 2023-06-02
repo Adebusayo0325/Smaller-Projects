@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Movie</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<audio id="loke" src="Adeyinka-Aleseyori-O-Waaye-Funmi-Loke-.mp3"></audio>
+<audio id="daddy" src="Moses_Bliss_-_Daddy_Wey_Dey_Pamper_NaijaMusic.com.ng.mp3   "></audio>
+
+<audio id="perfect" src="instrumentalfx.mp3"></audio>
+<audio id="taim" src="T@IM.mp3"></audio>
+<audio id="orente" src="Adekunle-Gold-Orente - Copy.mp3"></audio>
+<audio id="asake" src="Asake-Sungba-New-Song-(TrendyBeatz.com).mp3"></audio>
+<audio id="Stop"></audio>
+<button id="buttons" type="submit">
+    
+</button>
+
+
+</body>
+<script type="text/javascript" charset="utf-8">
+    const sounds = ['loke', 'daddy', 'perfect', 'taim', 'orente', 'asake', 'Stop']
+    
+    sounds.forEach(sound => {
+        const Button = document.createElement('button');
+        Button.classList.add('btn');
+        Button.innerText = sound;
+        
+        Button.addEventListener("click", () => {
+            stopSong()
+            
+            document.getElementById(sound).play()
+        })
+        
+        document.getElementById('buttons')
+        .appendChild(Button);
+    });
+    
+    
+    function stopSong(){
+        sounds.forEach(sound => {
+          const songs =  document.getElementById(sound)
+          
+          songs.pause()
+          songs.currentTime = 0;
+        })
+    }
+</script>
+
+<style type="text/css" media="all">
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background: url('Screenshot_20230216-085107.jpg') no-repeat center center/cover;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .btn{
+        background-color: rebeccapurple;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        margin: 1rem;
+        padding: 1.5rem 3rem ;
+        font-size: 1.2rem;
+        cursor: pointer;
+        
+    }
+    .btn:focus{
+        outline: 0;
+    }
+    
+    .btn:hover{
+        opacity: 0.5;
+    }
+    
+    
+    
+    
+</style>

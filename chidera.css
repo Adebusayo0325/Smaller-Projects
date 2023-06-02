@@ -1,0 +1,41 @@
+h1 {
+    font-style: calibri;
+    color:blueviolet;
+}
+.nav-btn  {
+    width: 2rem;
+}
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar {
+background-color: steelblue;
+padding: 1rem;
+position: fixed;
+inset: 0;
+transform: translateX(100%);
+transition: all 0.3s ease-in;
+}
+.show-nav {
+    transform: translateX(0);
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+li {
+    font-size: 1.5rem;
+}
+.close-nav {
+    width: 3rem;
+}
+body{
+   background-image: url("2349018590591_status_11784fe8e489485e8e33dd271496c808.jpg");
+  /* background-image: url("logo.svg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}

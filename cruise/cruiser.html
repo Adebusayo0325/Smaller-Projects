@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="story">
+      <div class="peter">Singleness no good</div>
+      <div class="peter">Joy don break your heart</div>
+      <div class="peter">So na Posi you go dey call now</div>
+      <div class="peter">Goan marry your Bestfriend</div>
+      <div class="peter">Single Pringle!!!</div>
+    </div>
+  </body>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+
+      max-width: 100%;
+    }
+    .story {
+      max-width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .peter {
+      position: absolute;
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+      width: 350px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+      color: white;
+      border-radius: 10px;
+      border: 2px solid lightgrey;
+      height: 200px;
+
+      background-color: blueviolet;
+    }
+    @keyframes busayo {
+      0% {
+        transform: translateX(0%) translateY(50%);
+      }
+      25% {
+        transform: translateX(100%) translateY(0%);
+      }
+      50% {
+        transform: translateY(50%) translateX(0%);
+      }
+      100% {
+        transform: translateY(100%) translateX(50%);
+      }
+    }
+    .peter:nth-child(1) {
+      background-color: blue;
+      position: absolute;
+      margin: 20px;
+      background-color: yellow;
+
+      transition: transform 4s ease-in;
+      animation-name: busayo;
+      animation-duration: 8s;
+      animation-delay: 0.4s;
+      animation-direction: normal;
+      color: blue;
+    }
+    .peter:nth-child(2) {
+      position: absolute;
+
+      margin: 20px;
+      background-color: chartreuse;
+      color: red;
+      transition: transform 4s ease-in;
+      animation-name: busayo;
+      animation-duration: 8s;
+      animation-delay: 3s;
+      animation-direction: reverse;
+    }
+    .peter:nth-child(3) {
+      position: absolute;
+
+      margin: 20px;
+      background-color: rgb(96, 121, 72);
+      color: yellow;
+      transition: transform 4s ease-in;
+      animation-name: busayo;
+      animation-duration: 8s;
+      animation-delay: 5s;
+      animation-direction: alternate-reverse;
+    }
+    .peter:nth-child(4) {
+      position: absolute;
+      margin-top: 0px;
+
+      color: rgb(230, 216, 216);
+
+      transform: translateY(0px), translateX(100%);
+      margin: 20px;
+      background-color: rgb(121, 41, 133);
+      transition: transform 4s ease-in;
+      animation-name: peter;
+      animation-duration: 8s;
+      animation-delay: 7s;
+      animation-direction: reverse;
+    }
+    .peter:nth-child(5) {
+      margin-top: 0px;
+      margin-bottom: 40px;
+
+      color: rgb(208, 24, 10);
+
+      transform: translateY(0px), translateX(100%);
+      margin: 20px;
+      background-color: rgb(79, 157, 107);
+      transition: transform 4s ease-in;
+      animation-name: single;
+      animation-duration: 8s;
+      animation-delay: 10s;
+      animation-direction: alternate-reverse;
+    }
+    @keyframes peter {
+      0% {
+        transform: rotateX(-20deg), rotateY(90deg);
+        transform: translateX(-50%) translateY(50%);
+      }
+      25% {
+        transform: translateX(100%) translateY(50%);
+      }
+      50% {
+        transform: translateY(-50%) translateX(100%);
+      }
+      100% {
+        transform: translateY(100%) translateX(0%);
+      }
+    }
+
+    @keyframes single {
+      0% {
+        transform: translateX(0%) translateY(50%);
+      }
+      25% {
+        transform: translateX(0%) translateY(50%);
+      }
+      50% {
+        transform: translateY(-50%) translateX(70%);
+      }
+      100% {
+        transform: translateY(100%) translateX(100%);
+      }
+    }
+  </style>
+</html>

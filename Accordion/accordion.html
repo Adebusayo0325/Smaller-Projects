@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="accordion">
+    
+    <h2 class="title">Frequently asked questions</h2>
+    <div class="container">
+        
+        <div class="question">What is the return policy? </div>
+        
+        <div class="answer">I saw him, I saw him !!!
+I saw his knife pierce through her chest,
+Her bleeding thoughts saturated with curses filled the air
+I saw his hand reach through the hole he had created
+Yanking out her heart with blood spurting out of her chest
+I saw the smile that crept slowly into his face 
+With her lifeless body curled up in his arms
+I saw the joy in the face of the shadow behind him
+Like a climber who had just surmounted his Everest</div>
+
+</div>
+    <div class="container">
+        <div class="question">When will i receive my order? </div>
+        
+        <div class="answer">I was broken by my own mind 
+Because I couldn’t shake off the thought of you
+I was ripped apart by my  own emotions
+All because you refused to play your part
+I was a prisoner of my own fantasy
+Just because I couldn’t let go
+Perhaps I knew how to be free
+But I didn’t want the false reality that I had created fall apart
+I looked into my own hear</div>
+
+</div>
+
+<div class="container">
+    
+
+        
+        <div class="question">Where are you located? </div>
+        
+        <div class="answer">I gazed upon them riveling in their own stupidity
+Watching them ignore life’s ferocity
+I finally got my chance
+To view and see for myself this bizarre creatures 
+Who cover their imperfections with flimsy excuses
+They appraise themselves by criticism 
+Traveling to this world taught me a lot
+Giving life to the stories my Master told me about
+An inferior race intoxicated by a superiority complex</div>
+        
+ 
+ 
+        
+    </div>
+    
+</div>
+
+</body>
+
+
+
+</body>
+
+<style>
+  /* *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   } */
+   
+   body{
+       height: 100vh;
+       display: flex;
+       background: url("Black Panther Neon.jpeg") center center/cover;
+       justify-content: center;
+       align-items: center;
+        background-attachment: fixed;
+   }
+   
+   .accordion{
+       width: 65%;
+      background: #fff;
+      
+      color:black;
+       padding: 30px;
+       border-radius: 30px ;
+        
+   }
+   .accordion .title{
+        margin-bottom: 30px;
+        text-align: center;
+        color: #00f;
+   }
+   
+   .accordion .container .question{
+       padding: 18px 0px;
+       font-size: 22px;
+       cursor : pointer;
+       border-bottom: 1px solid black;
+       position: relative;
+       
+   }
+   
+   .accordion .container .question::after{
+       content: '+';
+       position: absolute;
+       right: -5px;
+        
+   }
+   
+.accordion .container .answer{
+    padding-top:15px ;
+    transition: .5s;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+}
+
+.accordion .container.active .answer{
+    height: 60%;
+    
+}
+
+.accordion .container.active .question{
+    font-size: 18px;
+    transition: .5s;
+}
+
+.accordion .container.active .question::after{
+    transition: .5s;
+    content: "-";
+    font-size: 30px;
+}
+   
+   
+</style>
+
+<script>
+     const accordion = document.getElementsByClassName("container");
+     
+     
+     for(i = 0; i < accordion.length; i++)
+    {
+        accordion[i].addEventListener("click", function(){
+            this.classList.toggle("active");
+            });
+       // window.addEventListener("click", function(e) {
+       //    if(e.target === accordion){
+      //        this.classList.toggle("active"); 
+//      }
+    //    })
+    } 
+</script>
+
+</html>

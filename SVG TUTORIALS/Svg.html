@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mentro-Web-Challenge</title>
+<link rel="stylesheet" href="images/style.css">
+<!-- <link rel="stylesheet" href="images/test.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <SVG >
+     <symbol id="text">
+     <text text-anchor= "middle" x= "50%" y = "50%" >
+      Adeola
+     </text>
+     </symbol>
+    <use xlink:href= "#text"
+     >
+        
+    </use>
+     </SVG>
+
+
+</body>
+<style type="text/css" media="all">
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   
+   body{
+     
+       
+       
+   /*    background: url('/storage/emulated/0/SVG TUTORIALS /parrot-4622786_960_720.jpg');  */
+       background: conic-gradient(purple 5%, white 30%, crimson 35%, black 45%, purple 55% , white 70% , purple 80% , crimson 90% , black 100%);
+       background-size: cover;
+       background-repeat: no-repeat;
+   }
+   
+   SVG{
+       width: 90%;
+       margin: 0 auto;
+       height: 350px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       animation: moves 12s linear infinite 2s;
+   }
+   
+   svg text {
+       font-size: 70px;
+       fill: rgba(0,0,0,0.3);
+       stroke-width: 1px;
+       stroke-linecap: round;
+       stroke-linejoin: round;
+       stroke-dasharray: 80;
+       stroke: #fff;
+       animation: animate 1s  linear infinite, moves 12s linear infinite 5s;
+       transition: transform 2s ease-in-out;
+       stroke-opacity: 0.5;
+   }
+    
+    
+    
+    
+    @keyframes animate {
+        100%{
+            stroke-dashoffset: 160;
+        }
+    }
+    @keyframes moves {
+        from {
+        transform: rotateY(5deg);
+        }
+        to {
+            transform: rotateY(0deg);
+        }
+    }
+</style>
+</html>

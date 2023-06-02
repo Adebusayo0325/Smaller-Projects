@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD DETAILS</title>
+</head>
+<body>
+    
+        <button class="toggle" type="submit">Dark Mode</button>
+<div class="clock-container">
+    <div class="clock">
+   
+   
+   
+    
+   
+   
+
+   
+        
+        
+     <div class="needle hour">
+         
+     </div> 
+     <div class="needle minute">
+         
+     </div>
+     <div class="needle second">
+         
+     </div>
+     <div class="needle-point">
+         
+     </div>
+    </div>
+    <div class="time">
+       12:00 
+    </div>
+    <div class="date">
+        Monday,Feb <span class="circle">26</span>
+    </div>
+</div>
+
+
+</body>
+<style>p
+    *{
+        box-sizing: border-box;
+    }
+    
+    :root{
+        --primary-color: #000;
+        --secondary-color: #fff;
+    }
+    html.dark{
+               --primary-color: #fff;
+        --secondary-color: #333; 
+    }
+    html.dark{
+        background-color: #111;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+    .toggle{
+        background-color: var(--primary-color);
+        position: absolute;
+        color: var(--secondary-color);
+        top: 100px;
+        border-radius: 2px;
+        border: none;
+        padding: 8px 12px;
+    }
+    .toggle:focus{
+        outline: 0;
+    }
+    
+    .clock-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        
+    }
+    .clock{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: solid 2px var(--primary-color);
+        background-color: var(--secondary-color);
+        padding: 2em;
+      /*  background-color: #f0f0f0; */
+    }
+    
+    .needle{
+        position: absolute;
+        touch-action: manipulation;
+        top: 50%;
+        left: 50%;
+        width: 3px;
+        background-color: var(--primary-color);
+        transform-origin: bottom left;
+        height: 65px;
+    }
+    .needle.hour{
+        transform: translate(-50%, -100%) rotate(0deg);
+        
+    }
+    
+        .needle.minute{
+
+        transform: translate(-50%, -100%) rotate(0deg);
+         height: 100px;
+        
+    }
+    .needle.second{
+        transform: translate(-50%, -100%) rotate(0deg);
+        background-color: #e74c3c ;
+        
+        height: 100px;
+    }
+    
+    .needle-point{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #e74c3c;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle-point::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        transform: translate(-50%, -50%);
+    }
+    
+    .time{
+        font-size: 60px;
+        color: var(--primary-color);
+    }
+    
+    .date{
+        color: #aaa;
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+    }
+    
+    .date .circle{
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items:center;
+        height: 18px;
+        width: 18px;
+       line-height: 18px; 
+       transition: all 5s ease-in;
+       font-size: 12px;
+    }
+    
+</style>
+
+<script>
+    
+    const dateEl = document.querySelector('.date');
+    const hourEl = document.querySelector('.hour');
+
+const minuteEl = document.querySelector('.minute');
+    
+const secondEl = document.querySelector('.second');
+    
+const mode = document.querySelector('.toggle');
+    
+const timeEl  = document.querySelector('.time');
+    
+    
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const Months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    
+    mode.addEventListener("click", (e) =>
+    {
+        const html = document.querySelector("html");
+        if(html.classList.contains('dark')){
+            html.classList.remove('dark');
+            e.target.innerHTML = "Light mode"
+        }
+        else{
+           html.classList.add('dark');
+            e.target.innerHTML = "Dark mode"
+        } 
+        });
+        
+        
+        function setTime(){
+            const time = new Date();
+            const month = time.getMonth()
+            const date = time.getDate()
+            const day = time.getDay()
+            const hours = time.getHours()
+            const hoursForClock = hours % 12;
+           const ampm = hours >= 12 ? 'PM' : 'AM';
+            const minutes = time.getMinutes()
+            const seconds = time.getSeconds()
+            
+            hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 11, 0, 360)}deg) `
+            minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 59, 0, 360)}deg) `
+
+secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg) `
+            
+   
+   
+   
+   timeEl.innerHTML = ` ${hoursForClock}: ${minutes < 10 ? `0${minutes}`: minutes} ${ampm}`        
+        
+    dateEl.innerHTML = ` ${days[day]}, ${Months[month]} <span class= "circle" >${date}</span>`
+        }
+    
+    const scale = (num, in_min, in_max, out_min, out_max) => {
+
+        return(num - in_min) * (out_max -out_min) / (in_max - in_min) + out_min;
+
+    }
+
+    
+    
+    setTime()
+    
+    setInterval(setTime, 1000)
+</script>
+</html>

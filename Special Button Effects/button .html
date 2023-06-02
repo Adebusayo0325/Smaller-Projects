@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN FORM</title>
+</head>
+<body>
+
+
+<button type="button" class="btn">
+    Click Me!
+</button>
+
+</body>
+<style type="text/css" media="all">
+    *{
+        box-sizing: border-box;
+    }
+    
+    body{
+        margin: 0;
+        height: 100vh;
+        background-color: black  ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .btn{
+        position: relative;
+        padding: 20px 30px;
+        margin: 10px 0;
+        text-transform: uppercase;
+        background-color: purple;
+        color: white;
+        border: 1px solid purple;
+        letter-spacing: 2px;
+        font-size: 14px;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 5px;
+        touch-action: manipulation;
+    }
+    
+    .btn:focus, .btn:active{
+        outline: 0;
+        
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        position: absolute;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        transition: scale 0.5s ease-out;
+    }
+    @keyframes scale{
+        to{
+            transform: translate(-50%, -50%) scale(3);
+            opacity: 0;
+        }
+    }
+    
+</style>
+
+
+<script type="text/javascript" charset="utf-8">
+    
+    const btn = document.querySelectorAll('.btn');
+    
+    
+    btn.forEach(button => {
+        
+        button.addEventListener("click", function(e) {
+         const x = e.clientX;
+         const y = e.clientY;
+         
+         const buttonTop = e.target.offsetTop;
+         const buttonLeft = e.target.offsetLeft
+         
+         const xInside = x - buttonLeft ;
+         const yInside = y - buttonTop ;
+         const circle = document.createElement('span');
+         circle.classList.add('circle');
+         circle.style.top = yInside + "px"
+         circle.style.left = xInside + "px"
+         
+         this.appendChild(circle);
+         
+         setTimeout(() => circle.remove(), 500)
+        })
+    })
+    
+    
+    
+    
+    
+    
+    let num = prompt('Enter number');
+switch (true) {
+  case num > 0:
+    console.log('Number is positive');
+    break;
+  case num == 0:
+    console.log('Numbers is zero');
+    break;
+  case num < 0:
+    console.log('Number is negative');
+    break;
+  default:
+    console.log('Entered value was not a number');
+}
+</script>
+</html>

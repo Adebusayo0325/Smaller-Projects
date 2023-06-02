@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<main>
+    
+    <h2>JavaScript Quote Generator</h2>
+    
+    <div>
+        <span id="quote">"Busayo is a very great Person"</span>
+        
+        <div id="name">T@IM</div>
+        <button id="btn" type="submit">New Quote</button>
+    </div>
+    
+</main>
+
+<style type="text/css" media="all">
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   
+   
+   body{
+       background: url("carred.png") no-repeat center center/cover;
+       
+       display: flex;
+       width: 100%;
+       height: 100vh;
+   }
+   
+   main{
+       display: flex;
+       flex-direction: column;
+       width: 80%;
+       
+       height: 350px;
+       background: transparent;
+       margin: auto;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       
+        border: 10px 10px 3px solid;
+        border-radius: 30px;
+        border-color: white;
+       
+   }
+    main h2{
+        font-size: 2rem;
+        color: black;
+        background-color: white;
+        border: 10px 10px 10px solid;
+        border-radius: 30px;
+        padding: 2em;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+    
+    main div{
+        background-color: white;
+        color: black;
+        padding: 2em;
+                border: 10px 10px 3px solid;
+        border-radius: 30px;
+        border-color: green;
+        width: 90%;
+        
+    }
+    
+    main div #quote{
+        color: black;
+        font-size: 1rem;
+        border-color: green;
+    }
+    
+    main div #name{
+        color: red;
+        font-size: 1rem;
+    }
+    
+    main div #btn{
+        background-color: black;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        margin: 2px;
+        border-color: green;
+        border-width: 2px;
+        border-radius: 10px;
+        border-style: solid;
+    }
+    
+    #btn:active{
+        background-color: blue;
+        border-color: red;
+    }
+    
+    
+</style>
+
+<script>
+    let button = document.getElementById("btn");
+    let name = document.querySelector("#name");
+    let quote = document.querySelector("#quote");
+    
+    
+    const quotes = [{
+       quote: `"A man is calm even in the storm" `,
+
+name: `David Clark`
+},
+{
+    quote:` "Poverty does not give you options It keeps you option less."`,
+    name:`Fortune Nnamdi`
+    
+    
+},
+{
+    quote: `"Make money so you can buy what you deserve"`,
+    
+    name: `Peter Aderibigbe`
+},
+{
+    quote: `"Life is like a Banana"`,
+    
+    name: ` Sir Fex `
+},
+
+
+{
+    quote:`"Criticism shouldn't get to your heart Praises shouldn't get to your head"`,
+    name:`The Movie`
+},
+
+{
+    quote:` "I can't afford to be weak"`,
+    name:` Abiose Adebusayo`
+},
+{
+    quote: `"It takes guts to be successful
+You can't be free unless you fight
+You don't want to rebel.how do you now want to be successful"`,
+
+name: `Darasimi Ademola`
+},
+{
+    quote: `"Be rebellious in a good way"`,  name:` Darasimi Ademola`
+},
+{
+    quote:` "Gambling is similar to war only the winner takes the loot"`,
+    name:` Timmy Danny`
+},
+{
+    quote:` "intellect protects you from harm in exchange for loneliness"`,
+    name: `Busayo`
+},
+{
+    quote: ` "The only cage that can hold you is your  mind get out of your head and do something great"`,
+    name: `John Dalton`
+},
+
+
+   { quote:` "For you to become something You have to do somethingEven a thief has to steal to get the name tag..."`,
+name: `Hustler`
+},
+{
+    quote:` "
+Celebrate your small wins but don't get distracted by them.
+Don't dwell too much on them, they're just a milestone
+There are somethings that only you can tell yourself and you'll listen"`,
+name: `Focus`
+},
+
+{
+    quote:` "Unless you're under the rainz you can't determine it's actual intensity with naked eyes.
+Same with the process, the only information you'll have is the process changes you
+"`,
+name: `Experienced Teacher`
+},
+
+{
+    quote:` "Everyone else is in a process of becoming something...
+Although we all get to choose which process
+"`,
+name: `Busayo`
+},
+
+{
+    quote:` "How do you know you're getting there 
+When you're no longer surprised by your success
+"`,
+name: `Busayo`
+},
+
+{
+    quote:` "Change a luxury I can afford,
+Yet I surrender to mediocre instinct and I avoid
+"`,
+name: `Busayo`
+},
+
+{
+    quote:` "I'm made for the top
+"`,
+name: `Busayo`
+},
+
+{
+    quote:` "We either help people or we don't there is no ledger
+"`,
+name: `The movie`
+},
+
+{
+    quote:` "
+Remember it's the greediness of the mouth that causes diarrhoea"`,
+
+name: `Your HealthFriend`
+},
+{
+    quote:`"Sometimes the cure is a little taste of the disease.The difference between poison and medicine is the dosage"`,
+
+
+name: `Your HealthFriend`
+},
+
+{
+    quote:`"The brightest lights cast the Darkest Shadows"`,
+
+
+name: `Kuroko no Basket`
+},
+
+{
+    quote:`"Without the hearth and hands of the Goldsmith, Gold may never realize it's value.
+Surrender yourself to the process and stop complaining"`,
+
+
+name: `Mentor`
+},
+
+{
+    quote:`"MY LIFE WILL BE FRUITFUL"`,
+
+
+name: `Opeyemi`
+},
+
+
+
+
+{
+    
+    quote: `"It's not over until it is over"`,
+name: `Busayo`
+},
+
+
+
+
+
+
+
+
+
+
+{
+    quote:` "If everyone likes you.You lack character"`,
+    name: `The Movie`
+},
+{
+    quote: ` "Be joyful and celebrate everyday.Remember it's someone's birthday"`,
+    
+    name: `Busayo`
+},];
+
+button.addEventListener("click", function(){
+    let random = Math.floor(Math.random() * quotes.length);
+    
+    quote.innerText  = quotes[random].quote;
+    name.innerText = quotes[random].name;
+}
+
+);
+
+</script>
+
+</body>
+
+</html>

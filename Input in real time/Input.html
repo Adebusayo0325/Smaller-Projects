@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+
+<html> 
+
+  
+
+<body style="text-align:center;"> 
+
+    <h1 style="color:green;">   
+
+            GeeksforGeeks   
+
+    </h1> 
+
+    <h2>Text value property</h2> 
+
+    <p> 
+
+        Change the text of the text field,  
+
+        and then click the button below.  
+
+    </p> 
+
+   
+
+    Name:<input type="text" id="myText" value="Mickey"> 
+
+    <button type="button" onclick="myFunction()">Try it</button> 
+
+    <p id="demo"></p> 
+
+  
+
+      <div class="col-md-auto mx-auto">
+   <h3 class="text-center">Buy</h3>
+   <form action="/dashboard/" method="POST">
+      <div class="form-group">
+         <input type="number" id="buyA" min="3"class="form-control" name="buyA" placeholder="Amount">
+         <div class="d-grid gap-2">
+            <button class="btn btn-success">Buy X Things X</button>
+         </div>
+      </div>
+      <input type="hidden" id="buy" name="buy" value="buy">
+   </form>
+</div>
+
+    <script> 
+
+      
+
+    // Here the value is stored in new variable x  
+
+    function myFunction() { 
+
+        var x = document.getElementById("myText").value; 
+
+        document.getElementById("demo").innerHTML = x; 
+
+    } 
+
+window.addEventListener("type", myFunction);
+    </script> 
+
+</body> 
+
+  
+
+</html>

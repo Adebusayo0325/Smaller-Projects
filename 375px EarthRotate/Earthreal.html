@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+<article class="earth-demo">
+  <div class="earth">
+    <img src="earth.png">
+  </div>
+  <div class="moon-container">
+    <div class="moon">
+      <img src="image-moon.webp">
+    </div>
+  </div>
+</article>
+
+
+
+
+
+<style>
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.earth-demo {
+  background: #000;
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #ffffff 100%);
+
+  overflow: hidden;
+}
+
+.earth-demo::before {
+  background: url(https://cssanimation.rocks/images/random/space2.jpg) repeat center;
+  background-size: cover;
+  content: "";
+  opacity: .5;
+  background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #ffffff 100%);
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+
+.earth {
+  position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #ffffff 100%);
+
+    
+
+    animation: spiin 20s linear infinite;
+}
+ .earth img {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #ffffff 100%);
+
+    animation: spiin 20s linear infinite;
+  }
+
+  .more-info {
+    background-image: linear-gradient(to bottom, rgba(10,10,10,1), black);
+    border-radius: 1em;
+    color: #fff;
+    opacity: 0;
+    padding: 1em;
+    transform: scale(.8);
+    transform-origin: 0 0;
+    width: 400px;
+}
+
+.moon-container {
+  position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    background-color: red;
+}
+.moon {
+  animation: spin 20s linear infinite;
+  background: none;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  transform-origin: 25px;
+}
+.moon img {
+    transform: translateX(-160px) translateY(-160px);
+width: 50px;
+height: 50px;
+  }
+
+
+.earth img, .moon img {
+  border-radius: 50%;
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+}
+
+.earth:hover , .earth:active{
+    outline: 0;
+
+    
+
+  img {
+    transform: translateX(-75px) translateY(-75px) scale(.5);
+  }
+
+   .moon-container {
+    transform: translateX(-75px) translateY(-75px) scale(.4);
+  }
+    img {
+      transform: translateX(-140px) translateY(-140px);
+    }
+  
+
+
+  }
+
+* {
+  transition: all 4s cubic-bezier(0,1.5,.3,1);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spiin {
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+</style>
+
+</body>
+</html>

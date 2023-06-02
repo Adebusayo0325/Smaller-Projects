@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Movie</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="header">Welcome To our page</h1>
+        <form action="">
+            <div class="form-control">
+
+
+
+                <input type="text" name="EMAIL" required>
+                
+                                <label class="label"for="EMAIL">EMAIL :</label>
+
+
+            </div>
+            <div class="form-control">
+
+
+
+
+                <input type="password" name="password" required>
+
+
+                <label class="label" for="password">PASSWORD:</label>
+                
+                
+            </div>
+
+            <button class="btn" type="reset">Log In</button>
+
+
+            <p class="text">
+                Don't have an account ? <a class = "a" href="register Now">register Now</a>
+            </p>
+        </form>
+
+
+    </div>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: steelblue;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 30px 40px;
+            border-radius: 5px;
+        }
+        .a{
+            color: lightblue;
+            
+            text-decoration: none;
+    
+
+        }
+        .form-control {
+            position: relative;
+            padding: 20px 0 40px;
+            width: 300px;
+        }
+
+        .form-control input {
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid white;
+            display: block;
+            width: 100%;
+            padding: 15px 0px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .form-control input:focus, .form-control input:valid {
+            outline: 0;
+            border-bottom-color: lightblue;
+        }
+
+        .btn {
+            background-color: lightblue;
+            padding: 15px;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border: 0;
+            width: 100%;
+        }
+        .btn:focus {
+            outline: 0;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .text {
+            margin-top: 30px;
+        }
+
+        .form-control .label {
+            position: absolute;
+            top: 15%;
+            left: 0;
+
+        }
+        .form-control .label  span {
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-size: 18px;
+            display: inline-block;
+            min-width: 5px;
+            color: white;
+        }
+
+
+        input:focus +  .label span,  input:valid + .label span {
+            color: lightblue;
+            transform: translateY(-40px);
+        }
+    </style>
+
+    <script>
+
+        const labels = document.querySelectorAll('.form-control label');
+
+        labels.forEach(label => {
+            label.innerHTML = label.innerText.split('').map((letter, indx) => `<span style =" transition-delay: ${indx * 50}ms" > ${letter} </span>`).join('')
+            console.log(label);
+        })
+    </script>
+</body>
+</html>

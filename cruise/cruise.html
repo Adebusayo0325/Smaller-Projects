@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="story">
+      <div class="peter">Singleness no good</div>
+      <div class="peter">Joy don break your heart</div>
+      <div class="peter">So na Posi you go dey call now</div>
+      <div class="peter">Goan marry your Bestfriend</div>
+      <div class="peter">Single Pringle!!!</div>
+    </div>
+  </body>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      /*display: flex;
+        flex-wrap: nowrap; */
+      height: 100vh;
+      /* overflow-x: hidden; */
+      max-width: 100%;
+      /* justify-content: center; */
+      /* align-items: center; */
+    }
+    .story {
+      position: relative;
+      max-width: 100%;
+      /* background-color: yellow; */
+      top: 10%;
+      bottom: 10%;
+    }
+    .peter {
+      position: absolute;
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+      width: 250px;
+      color: white;
+      border-radius: 10px;
+      border: 2px solid lightgrey;
+      height: 200px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+      background-color: blueviolet;
+    }
+    @keyframes busayo {
+      0% {
+        transform: translateX(0%) translateY(50%);
+      }
+      25% {
+        transform: translateX(100%) translateY(0%);
+      }
+      50% {
+        transform: translateY(50%) translateX(0%);
+      }
+      100% {
+        transform: translateY(100%) translateX(50%);
+      }
+    }
+    .peter:nth-child(1) {
+      z-index: 10;
+      background-color: blue;
+      position: relative;
+      margin: 20px;
+      background-color: yellow;
+      /* transform: translateY(50px), translateX(50px); */
+      transition: transform 4s ease-in;
+      animation-name: busayo;
+      animation-duration: 4s;
+      animation-delay: 0.4s;
+      animation-direction: reverse;
+      color: blue;
+    }
+    .peter:nth-child(2) {
+      position: relative;
+      top: 30%;
+      left: 20%;
+      z-index: 100;
+      /* transform: translateY(30px), translateX(30px); */
+      margin: 20px;
+      background-color: chartreuse;
+      color: red;
+      transition: transform 4s ease-in;
+      animation-name: busayo;
+      animation-duration: 4s;
+      animation-delay: 3s;
+      animation-direction: reverse;
+    }
+    .peter:nth-child(3) {
+      position: relative;
+      top: 80%;
+      left: 40%;
+      z-index: 1000;
+      /* transform: translateY(80px), translateX(80px); */
+      margin: 20px;
+      background-color: rgb(96, 121, 72);
+      color: yellow;
+      transition: transform 4s ease-in;
+      animation-name: last;
+      animation-duration: 4s;
+      animation-delay: 8s;
+      animation-direction: reverse;
+    }
+    .peter:nth-child(4) {
+      position: absolute;
+      top: 30%;
+      margin-top: 0px;
+      bottom: 60%;
+      left: 60%;
+      color: rgb(230, 216, 216);
+      z-index: 10000;
+      transform: translateY(0px), translateX(100%);
+      margin: 20px;
+      background-color: rgb(121, 41, 133);
+      transition: transform 4s ease-in;
+      animation-name: peter;
+      animation-duration: 4s;
+      animation-delay: 3s;
+      animation-direction: reverse;
+    }
+    .peter:nth-child(5) {
+      position: absolute;
+      top: -10%;
+      margin-top: 0px;
+      margin-bottom: 40px;
+      bottom: 100%;
+      left: 66%;
+      color: rgb(208, 24, 10);
+      z-index: 100000;
+      transform: translateY(0px), translateX(100%);
+      margin: 20px;
+      background-color: rgb(79, 157, 107);
+      transition: transform 4s ease-in;
+      animation-name: single;
+      animation-duration: 4s;
+      animation-delay: 0s;
+      animation-direction: alternate-reverse;
+    }
+    @keyframes peter {
+      0% {
+        transform: rotateX(-20deg), rotateY(90deg);
+        transform: translateX(-50%) translateY(50%);
+      }
+      25% {
+        transform: translateX(100%) translateY(50%);
+      }
+      50% {
+        transform: translateY(-50%) translateX(100%);
+      }
+      100% {
+        transform: translateY(100%) translateX(0%);
+      }
+    }
+    @keyframes last {
+      0% {
+        /* transform: rotateX(-20deg), rotateY(90deg); */
+        transform: translateX(-50%) translateY(0%);
+      }
+      25% {
+        transform: translateX(100%) translateY(-70%);
+      }
+      50% {
+        transform: translateY(-50%) translateX(-100%);
+      }
+      100% {
+        transform: translateY(100%) translateX(0%);
+      }
+    }
+    @keyframes single {
+      0% {
+        transform: translateX(0%) translateY(50%);
+      }
+      25% {
+        transform: translateX(0%) translateY(50%);
+      }
+      50% {
+        transform: translateY(-50%) translateX(70%);
+      }
+      100% {
+        transform: translateY(100%) translateX(100%);
+      }
+    }
+  </style>
+</html>
